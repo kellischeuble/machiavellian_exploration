@@ -16,17 +16,15 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Your Value Proposition
+            ## Humans Are Predictable 
 
-            Emphasize how the app will benefit users. Don't emphasize the underlying technology.
+            Your beliefs shape your personality. Your personality shapes your beliefs.  
 
-            ✅ RUN is a running app that adapts to your fitness levels and designs personalized workouts to help you improve your running.
-
-            ❌ RUN is the only intelligent running app that uses sophisticated deep neural net machine learning to make your run smarter because we believe in ML driven workouts.
+           You can use this educational app to see how information about you and your personality can, in general, predict whether you are religious or not.
 
             """
         ),
-        dcc.Link(dbc.Button('Your Call To Action', color='primary'), href='/predictions')
+        dcc.Link(dbc.Button('Take The Survey', color='primary'), href='/predictions')
     ],
     md=4,
 )
