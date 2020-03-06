@@ -16,26 +16,28 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Humans Are Predictable 
+            ## Predicting Human Behavior
 
             Your beliefs shape your personality. Your personality shapes your beliefs.  
 
            You can use this educational app to see how information about you and your personality can, in general, predict whether you are religious or not.
 
-            """
+           My goal with this project was to analyze over 73,000 responses to a Machiavellian survey and look at the correlation between a person's answers and other traits that
+           the individual may have. 
+
+           By analyzing specific responses, we can learn what traits tend to correlate with specific behaviors like religious identity.
+        
+           """
         ),
         dcc.Link(dbc.Button('Take The Survey', color='primary'), href='/predictions')
     ],
     md=4,
 )
 
-gapminder = px.data.gapminder()
-fig = px.scatter(gapminder.query("year==2007"), x="gdpPercap", y="lifeExp", size="pop", color="continent",
-           hover_name="country", log_x=True, size_max=60)
-
 column2 = dbc.Col(
     [
-        dcc.Graph(figure=fig),
+      html.Img(src='assets/top_five_total.png', className='graph', style={'width': '80%'}),
+      html.Img(src='assets/religious.png', className='graph', style={'width': '80%', 'margin-top': '6%'} ),
     ]
 )
 
