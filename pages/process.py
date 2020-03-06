@@ -24,8 +24,8 @@ column1 = dbc.Col(
     ### Target Selection
 
         After looking at the data, I knew that I wanted to predict religion. I thought that it would be an interesting problem and was interested myself in what features, if any, 
-        could help predict someone's religion. My ultimate goal was to be able to make this a multi-class classificaiton problem with about four or five separate religious based on
-        clusters on the original data. However, I ran into a few problems and have so far stuck with classifying two groups: Non-religious (atheist and agnostic), and Relgious (all others).
+        could help predict someone's religion. My ultimate goal was to be able to make this a multi-class classification problem with about four or five separate religious based on
+        clusters on the original data. However, I ran into a few problems and have so far stuck with classifying two groups: Non-religious (atheist and agnostic), and Religious (all others).
 
     ###### This helped me go from a distribution of:
     '''
@@ -37,7 +37,7 @@ column1 = dbc.Col(
         '''
        ### Data Cleaning
         
-        To clean the data I dropped all values for questions that took someone less than half of a second to respond. This was less than the bottom quartile of data, and I felt that 
+        To clean the data, I dropped all values for questions that took someone less than half of a second to respond. This was less than the bottom quartile of data, and I felt that 
         people who wanted to give good responses would take longer than half of a second to read the question and respond. I also dropped unchecked values for
         education, gender, and religion. 
        
@@ -49,21 +49,21 @@ column1 = dbc.Col(
         ### Prediction
 
         First, I ran a logistic regression moel on my data. This gave me an accuracy score of 
-        #### 66.6%, which beat my baseline
+        ##### 66.6%, which beat my baseline
         
         Then, I ran XGBoost, which gave me a validation accuracy of
-        #### 66.5%, which is worse than logistic regression
+        ##### 66.5%, which is worse than logistic regression
          
          I then ran Random Forest Classifier, which gave me a validation accuracy of 
-         ### 66.7%, just barely better than the previous models.
+         ##### 66.7%, just barely better than the previous models.
 
 
          I then ran feature permutation and selected for the best features (shown on the insights page), and selected for features that had a permutation score greater
          than zero.
 
          My FINAL scores:
-         ### Validation Accuracy = 67.38%
-         ### Test Accuracy = 66.64%
+         ##### Validation Accuracy = 67.38%
+         ##### Test Accuracy = 66.64%
 
          While this is still much better than the baseline, I think that there are many more things that I can do to increase the score. I would like to run some
          more clustering techniques so that I am able to break down the classes a little bit more to make them more specific. I think that grouping religious and non-religious
